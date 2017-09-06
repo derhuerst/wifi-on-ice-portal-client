@@ -18,6 +18,11 @@
 		"node": ">=6"
 	},
 	"dependencies": {
+		"fetch-ponyfill": "^4.1.0",
+		"is-roughly-equal": "^0.1.0",
+		"lodash.omit": "^4.5.0",
+		"pinkie-promise": "^2.0.1",
+		"qs": "^6.5.0"
 	},
 	"devDependencies": {
 		"tap-min": "^1.2.1",
