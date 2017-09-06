@@ -1,7 +1,7 @@
 {
 	"name": "wifi-on-ice-portal-client",
-	"description": "Query information from the in-train portal in German ICE trains.",
-	"version": "0.1.0",
+	"description": "Query information from the WifiOnICE portal in German ICE trains.",
+	"version": "0.1.1",
 	"main": "index.js",
 	"files": [
 		"index.js"

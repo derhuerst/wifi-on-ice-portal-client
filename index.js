@@ -102,7 +102,8 @@ const journey = () => {
 				id: lineId,
 				name: lineName
 			},
-			// todo: _.actualPosition, _.totalDistance
+			traveledDistance: _.actualPosition,
+			totalDistance: _.totalDistance,
 			next, scheduledNext,
 			previous,
 			last,

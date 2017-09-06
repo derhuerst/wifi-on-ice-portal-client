@@ -1,6 +1,6 @@
 # wifi-on-ice-portal-client
 
-**Query information from the [in-train portal](https://www.bahn.com/en/view/trains/on-board-service/wifi.shtml) in [German ICE trains](https://en.wikipedia.org/wiki/Intercity-Express).**
+**Query information from the [WifiOnICE portal](https://www.bahn.com/en/view/trains/on-board-service/wifi.shtml) in [German ICE trains](https://en.wikipedia.org/wiki/Intercity-Express).**
 
 A lot of the [features of the portal](https://gist.github.com/derhuerst/bdca32a50c7ca4a004cee90745a7f68c) are not covered yet.
 
