@@ -1,0 +1,30 @@
+{
+	"name": "wifi-on-ice-portal-client",
+	"description": "Query information from the in-train portal in German ICE trains.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"todo"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/wifi-on-ice-portal-client",
+	"repository": "derhuerst/wifi-on-ice-portal-client",
+	"bugs": "https://github.com/derhuerst/wifi-on-ice-portal-client/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"tap-min": "^1.2.1",
+		"tape": "^4.6.3"
+	},
+	"scripts": {
+		"test": "node test.js | tap-min",
+		"prepublishOnly": "npm test"
+	}
+}
