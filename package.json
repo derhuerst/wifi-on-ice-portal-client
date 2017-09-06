@@ -7,7 +7,12 @@
 		"index.js"
 	],
 	"keywords": [
-		"todo"
+		"ice",
+		"intercity express",
+		"deutsche bahn",
+		"db",
+		"train",
+		"wifionice"
 	],
 	"author": "Jannis R <mail@jannisr.de>",
 	"homepage": "https://github.com/derhuerst/wifi-on-ice-portal-client",
@@ -23,7 +28,6 @@
 		"lodash.omit": "^4.5.0",
 		"moment-timezone": "^0.5.13",
 		"pinkie-promise": "^2.0.1",
-		"qs": "^6.5.0",
 		"slugg": "^1.2.1"
 	},
 	"devDependencies": {

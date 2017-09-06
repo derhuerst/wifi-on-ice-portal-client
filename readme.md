@@ -2,6 +2,8 @@
 
 **Query information from the [in-train portal](https://www.bahn.com/en/view/trains/on-board-service/wifi.shtml) in [German ICE trains](https://en.wikipedia.org/wiki/Intercity-Express).**
 
+A lot of the [features of the portal](https://gist.github.com/derhuerst/bdca32a50c7ca4a004cee90745a7f68c) are not covered yet.
+
 [![npm version](https://img.shields.io/npm/v/wifi-on-ice-portal-client.svg)](https://www.npmjs.com/package/wifi-on-ice-portal-client)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/wifi-on-ice-portal-client.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
@@ -17,7 +19,134 @@ npm install wifi-on-ice-portal-client
 ## Usage
 
 ```js
-todo
+const portal = require('wifi-on-ice-portal-client')
+
+portal.status()
+.then(console.log)
+.catch(console.error)
+```
+
+```js
+{
+	ok: true,
+	speed: 245,
+	gpsOk: true,
+	latitude: 51.86973533333333,
+	longitude: 9.989614166666666,
+	servicelevel: 'AVAILABLE_SERVICE',
+	wagonClass: 'FIRST',
+	serverTime: 1504698041985
+}
+```
+
+
+## API
+
+## `portal.status()`
+
+Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+
+## `portal.journey()`
+
+Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves with an [FPTF](https://github.com/public-transport/friendly-public-transport-format) `journey` leg, similar to [`db-hafas`](https://github.com/derhuerst/db-hafas/blob/master/docs/journeys.md#response). Looks like this:
+
+```js
+{
+	public: true,
+	mode: 'train',
+	line: {
+		type: 'line',
+		id: 'ice-599',
+		name: 'ICE 599'
+	},
+	next: {
+		type: 'station',
+		id: '8000128_00',
+		name: 'Göttingen',
+		coordinates: {latitude: 51.536815, longitude: 9.926072}
+	},
+	scheduledNext: {
+		type: 'station',
+		id: '8000128_00',
+		name: 'Göttingen',
+		coordinates: {latitude: 51.536815, longitude: 9.926072}
+	},
+	previous: {
+		type: 'station',
+		id: '8000169_00',
+		name: 'Hildesheim Hbf',
+		coordinates: {latitude: 52.160626, longitude: 9.953497}
+	},
+	last: {
+		type: 'station',
+		id: '8000261_00',
+		name: 'München Hbf',
+		coordinates: {latitude: 48.140232, longitude: 11.558335}
+	},
+	passed: [{
+		station: {
+			type: 'station',
+			id: '8010255_00',
+			name: 'Berlin Ostbahnhof',
+			coordinates: {latitude: 52.510977, longitude: 13.434564}
+		},
+		arrival: null,
+		arrivalDelay: null,
+		arrivalPlatform: '6',
+		departure: '2017-09-06T11:22:00+02:00',
+		departureDelay: 0,
+		departurePlatform: '6',
+		passed: true,
+		kmFromStart: 0
+	}, {
+		station: {
+			type: 'station',
+			id: '8011160_00',
+			name: 'Berlin Hbf',
+			coordinates: {latitude: 52.525592, longitude: 13.369545}
+		},
+		arrival: '2017-09-06T11:30:00+02:00',
+		arrivalDelay: 0,
+		arrivalPlatform: '14',
+		departure: '2017-09-06T11:34:00+02:00',
+		departureDelay: 0,
+		departurePlatform: '14',
+		passed: true,
+		kmFromStart: 4.691
+	},
+	// …
+	{
+		station: {
+			type: 'station',
+			id: '8004158_00',
+			name: 'München-Pasing',
+			coordinates: {latitude: 48.149852, longitude: 11.461872}
+		},
+		arrival: '2017-09-06T19:29:00+02:00',
+		arrivalDelay: 120,
+		arrivalPlatform: '9',
+		departure: '2017-09-06T19:31:00+02:00',
+		departureDelay: 120,
+		departurePlatform: '9',
+		passed: false,
+		kmFromStart: 881.612
+	}, {
+		station: {
+			type: 'station',
+			id: '8000261_00',
+			name: 'München Hbf',
+			coordinates: {latitude: 48.140232, longitude: 11.558335}
+		},
+		arrival: '2017-09-06T19:38:00+02:00',
+		arrivalDelay: 120,
+		arrivalPlatform: '14',
+		departure: null,
+		departureDelay: null,
+		departurePlatform: '14',
+		passed: false,
+		kmFromStart: 888.851
+	}]
+}
 ```
 
 

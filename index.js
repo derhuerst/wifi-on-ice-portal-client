@@ -1,6 +1,5 @@
 'use strict'
 
-const qs = require('querystring')
 const {fetch} = require('fetch-ponyfill')({Promise: require('pinkie-promise')})
 const omit = require('lodash.omit')
 const moment = require('moment-timezone')
@@ -9,12 +8,10 @@ const slugg = require('slugg')
 const endpoint = 'https://portal.imice.de/api1/rs/'
 const userAgent = 'https://github.com/derhuerst/wifi-on-ice-portal-client'
 
-const request = (route, query) => {
+const request = (route) => {
 	if ('string' !== typeof route) throw new Error('route must be a string')
-	if ('object' !== typeof query) throw new Error('query must be an object')
 
-	const url = endpoint + route + '?' + qs.stringify(query)
-	return fetch(url, {
+	return fetch(endpoint + route, {
 		mode: 'cors',
 		redirect: 'follow',
 		headers: {'User-Agent': userAgent}
@@ -30,7 +27,7 @@ const request = (route, query) => {
 }
 
 const status = () => {
-	return request('status', {})
+	return request('status')
 	.then((data) => {
 		const res = omit(data, ['connection', 'gpsStatus'])
 		res.ok = data.connection
@@ -79,7 +76,7 @@ const parsePassed = (_) => {
 }
 
 const journey = () => {
-	return request('tripInfo', {})
+	return request('tripInfo')
 	.then((_) => {
 		const passed = _.stops.map(parsePassed)
 
