@@ -21,8 +21,10 @@
 		"fetch-ponyfill": "^4.1.0",
 		"is-roughly-equal": "^0.1.0",
 		"lodash.omit": "^4.5.0",
+		"moment-timezone": "^0.5.13",
 		"pinkie-promise": "^2.0.1",
-		"qs": "^6.5.0"
+		"qs": "^6.5.0",
+		"slugg": "^1.2.1"
 	},
 	"devDependencies": {
 		"tap-min": "^1.2.1",
