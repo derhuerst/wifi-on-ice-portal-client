@@ -32,6 +32,7 @@ const status = () => {
 		const res = omit(data, ['connection', 'gpsStatus'])
 		res.ok = data.connection
 		res.gpsOk = data.gpsStatus === 'VALID'
+		if (!res.gpsOk) res.speed = null // speed is always 0 in tunnels
 		return res
 	})
 }
