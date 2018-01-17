@@ -58,10 +58,11 @@ test('journey', (t) => {
 			t.equal(typeof p.station.name, 'string', msg)
 			t.ok(p.station.name, msg)
 
-			const c = p.station.coordinates
-			t.ok(c, msg)
-			t.ok(isRoughlyEqual(10, c.latitude, 49), msg)
-			t.ok(isRoughlyEqual(10, c.longitude, 10), msg)
+			const l = p.station.location
+			t.ok(l, msg)
+			t.equal(l.type, 'location', msg)
+			t.ok(isRoughlyEqual(10, l.latitude, 49), msg)
+			t.ok(isRoughlyEqual(10, l.longitude, 10), msg)
 
 			if (p.arrival) t.ok(isValidDate(p.arrival), msg)
 			if (p.departure) t.ok(isValidDate(p.departure), msg)

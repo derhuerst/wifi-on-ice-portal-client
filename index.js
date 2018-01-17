@@ -63,7 +63,7 @@ const parsePassed = (_) => {
 			// todo: the ids looks like "8000169_00", remove last part?
 			id: _.station.evaNr,
 			name: _.station.name,
-			coordinates: _.station.geocoordinates
+			location: Object.assign({type: 'location'}, _.station.geocoordinates)
 		},
 		arrival: arr || schedArr ? parseTimestamp(arr || schedArr) : null,
 		arrivalDelay: arrDelay,

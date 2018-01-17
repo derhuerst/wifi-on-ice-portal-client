@@ -48,7 +48,7 @@ Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ## `portal.journey()`
 
-Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves with an [FPTF](https://github.com/public-transport/friendly-public-transport-format) `journey` leg, similar to [`db-hafas`](https://github.com/derhuerst/db-hafas/blob/master/docs/journeys.md#response). Looks like this:
+Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves with a [*Friendly Public Transport Format* `1.0.1` `journey`](https://github.com/public-transport/friendly-public-transport-format/blob/1.0.1/spec/readme.md#journey) leg, similar to [`db-hafas`](https://github.com/derhuerst/db-hafas#db-hafas). It looks like this:
 
 ```js
 {
@@ -63,32 +63,52 @@ Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 		type: 'station',
 		id: '8000128_00',
 		name: 'Göttingen',
-		coordinates: {latitude: 51.536815, longitude: 9.926072}
+		location: {
+			type: 'location',
+			latitude: 51.536815,
+			longitude: 9.926072
+		}
 	},
 	scheduledNext: {
 		type: 'station',
 		id: '8000128_00',
 		name: 'Göttingen',
-		coordinates: {latitude: 51.536815, longitude: 9.926072}
+		location: {
+			type: 'location',
+			latitude: 51.536815,
+			longitude: 9.926072
+		}
 	},
 	previous: {
 		type: 'station',
 		id: '8000169_00',
 		name: 'Hildesheim Hbf',
-		coordinates: {latitude: 52.160626, longitude: 9.953497}
+		location: {
+			type: 'location',
+			latitude: 52.160626,
+			longitude: 9.953497
+		}
 	},
 	last: {
 		type: 'station',
 		id: '8000261_00',
 		name: 'München Hbf',
-		coordinates: {latitude: 48.140232, longitude: 11.558335}
+		location: {
+			type: 'location',
+			latitude: 48.140232,
+			longitude: 11.558335
+		}
 	},
 	passed: [{
 		station: {
 			type: 'station',
 			id: '8010255_00',
 			name: 'Berlin Ostbahnhof',
-			coordinates: {latitude: 52.510977, longitude: 13.434564}
+			location: {
+				type: 'location',
+				latitude: 52.510977,
+				longitude: 13.434564
+			}
 		},
 		arrival: null,
 		arrivalDelay: null,
@@ -103,7 +123,11 @@ Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 			type: 'station',
 			id: '8011160_00',
 			name: 'Berlin Hbf',
-			coordinates: {latitude: 52.525592, longitude: 13.369545}
+			location: {
+				type: 'location',
+				latitude: 52.525592,
+				longitude: 13.369545
+			}
 		},
 		arrival: '2017-09-06T11:30:00+02:00',
 		arrivalDelay: 0,
@@ -120,7 +144,11 @@ Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 			type: 'station',
 			id: '8004158_00',
 			name: 'München-Pasing',
-			coordinates: {latitude: 48.149852, longitude: 11.461872}
+			location: {
+				type: 'location',
+				latitude: 48.149852,
+				longitude: 11.461872
+			}
 		},
 		arrival: '2017-09-06T19:29:00+02:00',
 		arrivalDelay: 120,
@@ -135,7 +163,11 @@ Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 			type: 'station',
 			id: '8000261_00',
 			name: 'München Hbf',
-			coordinates: {latitude: 48.140232, longitude: 11.558335}
+			location: {
+				type: 'location',
+				latitude: 48.140232,
+				longitude: 11.558335
+			}
 		},
 		arrival: '2017-09-06T19:38:00+02:00',
 		arrivalDelay: 120,
