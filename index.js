@@ -5,7 +5,7 @@ const omit = require('lodash.omit')
 const moment = require('moment-timezone')
 const slugg = require('slugg')
 
-const endpoint = 'https://portal.imice.de/api1/rs/'
+const endpoint = 'https://iceportal.de/api1/rs/'
 const userAgent = 'https://github.com/derhuerst/wifi-on-ice-portal-client'
 
 const request = (route) => {
@@ -77,14 +77,14 @@ const parsePassed = (_) => {
 }
 
 const journey = () => {
-	return request('tripInfo')
+	return request('tripInfo/trip')
 	.then((_) => {
-		const passed = _.stops.map(parsePassed)
+		const passed = _.trip.stops.map(parsePassed)
 
-		const lineName = _.trainType + ' ' + _.vzn
+		const lineName = _.trip.trainType + ' ' + _.trip.vzn
 		const lineId = slugg(lineName)
 
-		const s = _.stopInfo
+		const s = _.trip.stopInfo
 		const findPassed = (prop) => {
 			const p = s[prop] && passed.find(p => p.station.id === s[prop])
 			return p && p.station || null
@@ -103,8 +103,8 @@ const journey = () => {
 				id: lineId,
 				name: lineName
 			},
-			traveledDistance: _.actualPosition,
-			totalDistance: _.totalDistance,
+			traveledDistance: _.trip.actualPosition,
+			totalDistance: _.trip.totalDistance,
 			next, scheduledNext,
 			previous,
 			last,
