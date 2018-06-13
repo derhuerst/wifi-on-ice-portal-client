@@ -7,6 +7,7 @@ A lot of the [features of the portal](https://gist.github.com/derhuerst/bdca32a5
 [![npm version](https://img.shields.io/npm/v/wifi-on-ice-portal-client.svg)](https://www.npmjs.com/package/wifi-on-ice-portal-client)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/wifi-on-ice-portal-client.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
+[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
 
 
 ## Installing
