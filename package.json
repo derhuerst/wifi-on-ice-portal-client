@@ -1,7 +1,7 @@
 {
 	"name": "wifi-on-ice-portal-client",
 	"description": "Query information from the WifiOnICE portal in German ICE trains.",
-	"version": "0.2.1",
+	"version": "1.0.0",
 	"main": "index.js",
 	"files": [
 		"index.js"
@@ -20,7 +20,7 @@
 	"bugs": "https://github.com/derhuerst/wifi-on-ice-portal-client/issues",
 	"license": "ISC",
 	"engines": {
-		"node": ">=6"
+		"node": ">=8"
 	},
 	"dependencies": {
 		"fetch-ponyfill": "^4.1.0",

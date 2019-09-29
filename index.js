@@ -6,6 +6,7 @@ const moment = require('moment-timezone')
 const slugg = require('slugg')
 
 const endpoint = 'https://iceportal.de/api1/rs/'
+// const endpoint = 'https://portal.imice.de/api1/rs/'
 const userAgent = 'https://github.com/derhuerst/wifi-on-ice-portal-client'
 
 const request = (route) => {
