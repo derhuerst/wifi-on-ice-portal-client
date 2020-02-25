@@ -105,6 +105,7 @@ const journey = () => {
 				name: lineName
 			},
 			traveledDistance: _.trip.actualPosition,
+			distanceToPreviousStop: _.trip.distanceFromLastStop,
 			totalDistance: _.trip.totalDistance,
 			next, scheduledNext,
 			previous,

@@ -60,6 +60,9 @@ Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 		id: 'ice-599',
 		name: 'ICE 599'
 	},
+	traveledDistance: 189149, // in meters
+	distanceToPreviousStop: 191906, // in meters
+	totalDistance: 623577, // in meters
 	next: {
 		type: 'station',
 		id: '8000128_00',
