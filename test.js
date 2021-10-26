@@ -86,6 +86,10 @@ test('journey', (t) => {
 			t.equal(typeof p.passed, 'boolean', msg)
 			t.equal(typeof p.kmFromStart, 'number', msg)
 			t.ok(p.kmFromStart >= 0, msg)
+
+			if (p.delayReasons) {
+				t.ok(p.delayReasons instanceof Array, msg)
+			}
 		}
 
 		t.end()

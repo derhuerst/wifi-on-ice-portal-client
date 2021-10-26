@@ -67,133 +67,105 @@ Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 {
 	public: true,
 	mode: 'train',
-	line: {
-		type: 'line',
-		id: 'ice-599',
-		name: 'ICE 599'
-	},
-	traveledDistance: 189149, // in meters
-	distanceToPreviousStop: 191906, // in meters
-	totalDistance: 623577, // in meters
+	line: { type: 'line', id: 'ice-1556', name: 'ICE 1556' },
+	traveledDistance: 44502,
+	distanceToPreviousStop: 62523,
+	totalDistance: 436961,
 	next: {
 		type: 'station',
-		id: '8000128_00',
-		name: 'Göttingen',
-		location: {
-			type: 'location',
-			latitude: 51.536815,
-			longitude: 9.926072
-		}
+		id: '8010205_00',
+		name: 'Leipzig Hbf',
+		location: { type: 'location', latitude: 51.345471, longitude: 12.382064 }
 	},
 	scheduledNext: {
 		type: 'station',
-		id: '8000128_00',
-		name: 'Göttingen',
-		location: {
-			type: 'location',
-			latitude: 51.536815,
-			longitude: 9.926072
-		}
+		id: '8010205_00',
+		name: 'Leipzig Hbf',
+		location: { type: 'location', latitude: 51.345471, longitude: 12.382064 }
 	},
 	previous: {
 		type: 'station',
-		id: '8000169_00',
-		name: 'Hildesheim Hbf',
-		location: {
-			type: 'location',
-			latitude: 52.160626,
-			longitude: 9.953497
-		}
+		id: '8010297_00',
+		name: 'Riesa',
+		location: { type: 'location', latitude: 51.309654, longitude: 13.287734 }
 	},
 	last: {
 		type: 'station',
-		id: '8000261_00',
-		name: 'München Hbf',
-		location: {
-			type: 'location',
-			latitude: 48.140232,
-			longitude: 11.558335
+		id: '8070003_00',
+		name: 'Frankfurt (M) Flughafen Fernbf',
+		location: { type: 'location', latitude: 50.053167, longitude: 8.570185 }
+	},
+	passed: [
+		{
+			station: {
+				type: 'station',
+				id: '8010085_00',
+				name: 'Dresden Hbf',
+				location: { type: 'location', latitude: 51.040563, longitude: 13.732035 }
+			},
+			arrival: null,
+			arrivalDelay: null,
+			arrivalPlatform: '3',
+			departure: '2021-10-26T14:16:00+02:00',
+			departureDelay: 300,
+			departurePlatform: '3',
+			passed: true,
+			kmFromStart: 0,
+			delayReasons: null
+		},
+		{
+			station: {
+				type: 'station',
+				id: '8010089_00',
+				name: 'Dresden-Neustadt',
+				location: { type: 'location', latitude: 51.065899, longitude: 13.740701 }
+			},
+			arrival: '2021-10-26T14:20:00+02:00',
+			arrivalDelay: 300,
+			arrivalPlatform: '6',
+			departure: '2021-10-26T14:22:00+02:00',
+			departureDelay: 300,
+			departurePlatform: '6',
+			passed: true,
+			kmFromStart: 2.882,
+			delayReasons: [ { code: '36', text: 'Reparatur am Zug' } ]
+		},
+		// ...
+		{
+			station: {
+				type: 'station',
+				id: '8000105_00',
+				name: 'Frankfurt (Main) Hbf',
+				location: { type: 'location', latitude: 50.107145, longitude: 8.663789 }
+			},
+			arrival: '2021-10-26T18:38:00+02:00',
+			arrivalDelay: 120,
+			arrivalPlatform: '7',
+			departure: '2021-10-26T18:44:00+02:00',
+			departureDelay: 120,
+			departurePlatform: '7',
+			passed: false,
+			kmFromStart: 427.979,
+			delayReasons: [ { code: '36', text: 'Reparatur am Zug' } ]
+		},
+		{
+			station: {
+				type: 'station',
+				id: '8070003_00',
+				name: 'Frankfurt (M) Flughafen Fernbf',
+				location: { type: 'location', latitude: 50.053167, longitude: 8.570185 }
+			},
+			arrival: '2021-10-26T18:57:00+02:00',
+			arrivalDelay: 120,
+			arrivalPlatform: 'Fern 7',
+			departure: null,
+			departureDelay: null,
+			departurePlatform: 'Fern 7',
+			passed: false,
+			kmFromStart: 436.961,
+			delayReasons: [ { code: '36', text: 'Reparatur am Zug' } ]
 		}
-	},
-	passed: [{
-		station: {
-			type: 'station',
-			id: '8010255_00',
-			name: 'Berlin Ostbahnhof',
-			location: {
-				type: 'location',
-				latitude: 52.510977,
-				longitude: 13.434564
-			}
-		},
-		arrival: null,
-		arrivalDelay: null,
-		arrivalPlatform: '6',
-		departure: '2017-09-06T11:22:00+02:00',
-		departureDelay: 0,
-		departurePlatform: '6',
-		passed: true,
-		kmFromStart: 0
-	}, {
-		station: {
-			type: 'station',
-			id: '8011160_00',
-			name: 'Berlin Hbf',
-			location: {
-				type: 'location',
-				latitude: 52.525592,
-				longitude: 13.369545
-			}
-		},
-		arrival: '2017-09-06T11:30:00+02:00',
-		arrivalDelay: 0,
-		arrivalPlatform: '14',
-		departure: '2017-09-06T11:34:00+02:00',
-		departureDelay: 0,
-		departurePlatform: '14',
-		passed: true,
-		kmFromStart: 4.691
-	},
-	// …
-	{
-		station: {
-			type: 'station',
-			id: '8004158_00',
-			name: 'München-Pasing',
-			location: {
-				type: 'location',
-				latitude: 48.149852,
-				longitude: 11.461872
-			}
-		},
-		arrival: '2017-09-06T19:29:00+02:00',
-		arrivalDelay: 120,
-		arrivalPlatform: '9',
-		departure: '2017-09-06T19:31:00+02:00',
-		departureDelay: 120,
-		departurePlatform: '9',
-		passed: false,
-		kmFromStart: 881.612
-	}, {
-		station: {
-			type: 'station',
-			id: '8000261_00',
-			name: 'München Hbf',
-			location: {
-				type: 'location',
-				latitude: 48.140232,
-				longitude: 11.558335
-			}
-		},
-		arrival: '2017-09-06T19:38:00+02:00',
-		arrivalDelay: 120,
-		arrivalPlatform: '14',
-		departure: null,
-		departureDelay: null,
-		departurePlatform: '14',
-		passed: false,
-		kmFromStart: 888.851
-	}]
+	]
 }
 ```
 
