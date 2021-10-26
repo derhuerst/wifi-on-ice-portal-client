@@ -6,8 +6,8 @@ A lot of the [features of the portal](https://gist.github.com/derhuerst/bdca32a5
 
 [![npm version](https://img.shields.io/npm/v/wifi-on-ice-portal-client.svg)](https://www.npmjs.com/package/wifi-on-ice-portal-client)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/wifi-on-ice-portal-client.svg)
-[![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
-[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
+[![support me via GitHub Sponsors](https://img.shields.io/badge/support%20me-donate-fa7664.svg)](https://github.com/sponsors/derhuerst)
+[![chat with me on Twitter](https://img.shields.io/badge/chat%20with%20me-on%20Twitter-1da1f2.svg)](https://twitter.com/derhuerst)
 
 
 ## Installing
@@ -61,7 +61,7 @@ Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ## `portal.journey()`
 
-Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves with a [*Friendly Public Transport Format* `1.0.1` `journey`](https://github.com/public-transport/friendly-public-transport-format/blob/1.0.1/spec/readme.md#journey) leg, similar to [`db-hafas`](https://github.com/derhuerst/db-hafas#db-hafas). It looks like this:
+Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves with a [*Friendly Public Transport Format* `1.2.1` `journey`](https://github.com/public-transport/friendly-public-transport-format/blob/1.2.1/spec/readme.md#journey) leg, similar to [`db-hafas`](https://github.com/public-transport/db-hafas#db-hafas). It looks like this:
 
 ```js
 {
@@ -172,6 +172,7 @@ Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ## Related
 
+- [*Was das neue Bahn-Wifi über seine Nutzer ausplaudert*](https://hannover.ccc.de/~nexus/dbwifi/)
 - [`wifi-on-ice-position-stream`](https://github.com/derhuerst/wifi-on-ice-position-stream) – A stream of ICE positions, taken from the on-board WiFi.
 - [`record-ice-movement`](https://github.com/derhuerst/record-ice-movement) – Record the movement of any ICE using the on-board WiFi.
 - [`sncf-wifi-portal-client`](https://github.com/derhuerst/sncf-wifi-portal-client) – Query information from the SNCF WiFi portal in French TGV trains.
