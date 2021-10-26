@@ -29,14 +29,26 @@ portal.status()
 
 ```js
 {
-	ok: true,
-	speed: 245,
-	gpsOk: true,
-	latitude: 51.86973533333333,
-	longitude: 9.989614166666666,
-	servicelevel: 'AVAILABLE_SERVICE',
+	serviceLevel: 'AVAILABLE_SERVICE',
+	internet: 'HIGH',
+	latitude: 51.2719795,
+	longitude: 13.4613135,
+	tileY: 141,
+	tileX: 275,
+	series: '411',
+	serverTime: 1635252079700,
+	speed: 0,
+	trainType: 'ICE',
+	tzn: 'Tz1178',
 	wagonClass: 'FIRST',
-	serverTime: 1504698041985
+	connectivity: {
+		currentState: 'HIGH',
+		nextState: 'UNSTABLE',
+		remainingTimeSeconds: 3600
+	},
+	bapInstalled: true,
+	ok: true,
+	gpsOk: true
 }
 ```
 
