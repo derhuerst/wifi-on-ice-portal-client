@@ -57,7 +57,6 @@ const parsePassed = (_) => {
 
 	// todo: what is _.info.status?
 	// todo: _.info.distance
-	// todo: _.delayReasons
 	return {
 		station: {
 			type: 'station',
@@ -73,7 +72,8 @@ const parsePassed = (_) => {
 		departureDelay: depDelay,
 		departurePlatform: platform,
 		passed: _.info.passed,
-		kmFromStart: _.info.distanceFromStart / 1000
+		kmFromStart: _.info.distanceFromStart / 1000,
+		delayReasons: _.delayReasons
 	}
 }
 
